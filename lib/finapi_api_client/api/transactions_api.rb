@@ -103,8 +103,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling TransactionsApi.delete_transaction"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling TransactionsApi.delete_transaction, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling TransactionsApi.delete_transaction, must conform to the pattern /[\d]+/."
       end
 
       # resource path
@@ -208,8 +208,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && ids.nil?
         fail ArgumentError, "Missing the required parameter 'ids' when calling TransactionsApi.edit_multiple_transactions_deprecated"
       end
-      if @api_client.config.client_side_validation && ids !~ Regexp.new(/[\\d]+,[\\d,]+/)
-        fail ArgumentError, "invalid value for 'ids' when calling TransactionsApi.edit_multiple_transactions_deprecated, must conform to the pattern /[\\d]+,[\\d,]+/."
+      if @api_client.config.client_side_validation && ids !~ Regexp.new(/[\d]+,[\d,]+/)
+        fail ArgumentError, "invalid value for 'ids' when calling TransactionsApi.edit_multiple_transactions_deprecated, must conform to the pattern /[\d]+,[\d,]+/."
       end
 
       # verify the required parameter 'body' is set
@@ -268,8 +268,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling TransactionsApi.edit_transaction"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling TransactionsApi.edit_transaction, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling TransactionsApi.edit_transaction, must conform to the pattern /[\d]+/."
       end
 
       # verify the required parameter 'body' is set
@@ -465,8 +465,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && ids.nil?
         fail ArgumentError, "Missing the required parameter 'ids' when calling TransactionsApi.get_multiple_transactions"
       end
-      if @api_client.config.client_side_validation && ids !~ Regexp.new(/[\\d]+,[\\d,]+/)
-        fail ArgumentError, "invalid value for 'ids' when calling TransactionsApi.get_multiple_transactions, must conform to the pattern /[\\d]+,[\\d,]+/."
+      if @api_client.config.client_side_validation && ids !~ Regexp.new(/[\d]+,[\d,]+/)
+        fail ArgumentError, "invalid value for 'ids' when calling TransactionsApi.get_multiple_transactions, must conform to the pattern /[\d]+,[\d,]+/."
       end
 
       # resource path
@@ -519,8 +519,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling TransactionsApi.get_transaction"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling TransactionsApi.get_transaction, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling TransactionsApi.get_transaction, must conform to the pattern /[\d]+/."
       end
 
       # resource path
@@ -573,8 +573,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling TransactionsApi.restore_transaction"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling TransactionsApi.restore_transaction, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling TransactionsApi.restore_transaction, must conform to the pattern /[\d]+/."
       end
 
       # resource path
@@ -629,8 +629,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling TransactionsApi.split_transaction"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling TransactionsApi.split_transaction, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling TransactionsApi.split_transaction, must conform to the pattern /[\d]+/."
       end
 
       # verify the required parameter 'body' is set

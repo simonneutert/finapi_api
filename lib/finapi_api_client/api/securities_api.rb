@@ -116,8 +116,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && ids.nil?
         fail ArgumentError, "Missing the required parameter 'ids' when calling SecuritiesApi.get_multiple_securities"
       end
-      if @api_client.config.client_side_validation && ids !~ Regexp.new(/[\\d]+,[\\d,]+/)
-        fail ArgumentError, "invalid value for 'ids' when calling SecuritiesApi.get_multiple_securities, must conform to the pattern /[\\d]+,[\\d,]+/."
+      if @api_client.config.client_side_validation && ids !~ Regexp.new(/[\d]+,[\d,]+/)
+        fail ArgumentError, "invalid value for 'ids' when calling SecuritiesApi.get_multiple_securities, must conform to the pattern /[\d]+,[\d,]+/."
       end
 
       # resource path
@@ -170,8 +170,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling SecuritiesApi.get_security"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling SecuritiesApi.get_security, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling SecuritiesApi.get_security, must conform to the pattern /[\d]+/."
       end
 
       # resource path

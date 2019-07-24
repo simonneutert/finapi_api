@@ -132,8 +132,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling CategoriesApi.delete_category"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling CategoriesApi.delete_category, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling CategoriesApi.delete_category, must conform to the pattern /[\d]+/."
       end
 
       # resource path
@@ -187,8 +187,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling CategoriesApi.edit_category"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling CategoriesApi.edit_category, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling CategoriesApi.edit_category, must conform to the pattern /[\d]+/."
       end
 
       # resource path
@@ -416,8 +416,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling CategoriesApi.get_category"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling CategoriesApi.get_category, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling CategoriesApi.get_category, must conform to the pattern /[\d]+/."
       end
 
       # resource path
@@ -470,8 +470,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && ids.nil?
         fail ArgumentError, "Missing the required parameter 'ids' when calling CategoriesApi.get_multiple_categories"
       end
-      if @api_client.config.client_side_validation && ids !~ Regexp.new(/[\\d]+,[\\d,]+/)
-        fail ArgumentError, "invalid value for 'ids' when calling CategoriesApi.get_multiple_categories, must conform to the pattern /[\\d]+,[\\d,]+/."
+      if @api_client.config.client_side_validation && ids !~ Regexp.new(/[\d]+,[\d,]+/)
+        fail ArgumentError, "invalid value for 'ids' when calling CategoriesApi.get_multiple_categories, must conform to the pattern /[\d]+,[\d,]+/."
       end
 
       # resource path

@@ -136,8 +136,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling NotificationRulesApi.delete_notification_rule"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling NotificationRulesApi.delete_notification_rule, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling NotificationRulesApi.delete_notification_rule, must conform to the pattern /[\d]+/."
       end
 
       # resource path
@@ -245,8 +245,8 @@ module FinapiApiClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling NotificationRulesApi.get_notification_rule"
       end
-      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\\d]+/)
-        fail ArgumentError, "invalid value for 'id' when calling NotificationRulesApi.get_notification_rule, must conform to the pattern /[\\d]+/."
+      if @api_client.config.client_side_validation && id !~ Regexp.new(/[\d]+/)
+        fail ArgumentError, "invalid value for 'id' when calling NotificationRulesApi.get_notification_rule, must conform to the pattern /[\d]+/."
       end
 
       # resource path
