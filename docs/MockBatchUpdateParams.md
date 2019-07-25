@@ -1,4 +1,4 @@
-# FinapiApiClient::MockBatchUpdateParams
+# FinapiApi::MockBatchUpdateParams
 
 ## Properties
 Name | Type | Description | Notes

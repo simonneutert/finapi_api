@@ -1,4 +1,4 @@
-# FinapiApiClient::ErrorDetails
+# FinapiApi::ErrorDetails
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# FinapiApiClient::SplitTransactionsParams
+# FinapiApi::SplitTransactionsParams
 
 ## Properties
 Name | Type | Description | Notes

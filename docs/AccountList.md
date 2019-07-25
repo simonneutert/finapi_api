@@ -1,4 +1,4 @@
-# FinapiApiClient::AccountList
+# FinapiApi::AccountList
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# FinapiApiClient::CheckCategorizationTransactionData
+# FinapiApi::CheckCategorizationTransactionData
 
 ## Properties
 Name | Type | Description | Notes

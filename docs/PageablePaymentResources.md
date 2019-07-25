@@ -1,4 +1,4 @@
-# FinapiApiClient::PageablePaymentResources
+# FinapiApi::PageablePaymentResources
 
 ## Properties
 Name | Type | Description | Notes

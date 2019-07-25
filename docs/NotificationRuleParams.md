@@ -1,4 +1,4 @@
-# FinapiApiClient::NotificationRuleParams
+# FinapiApi::NotificationRuleParams
 
 ## Properties
 Name | Type | Description | Notes

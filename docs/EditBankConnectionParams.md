@@ -1,4 +1,4 @@
-# FinapiApiClient::EditBankConnectionParams
+# FinapiApi::EditBankConnectionParams
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# FinapiApiClient::SingleDirectDebitData
+# FinapiApi::SingleDirectDebitData
 
 ## Properties
 Name | Type | Description | Notes

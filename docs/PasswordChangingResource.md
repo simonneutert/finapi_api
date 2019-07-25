@@ -1,4 +1,4 @@
-# FinapiApiClient::PasswordChangingResource
+# FinapiApi::PasswordChangingResource
 
 ## Properties
 Name | Type | Description | Notes

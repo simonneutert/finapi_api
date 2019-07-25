@@ -1,4 +1,4 @@
-# FinapiApiClient::UpdateBankConnectionParams
+# FinapiApi::UpdateBankConnectionParams
 
 ## Properties
 Name | Type | Description | Notes

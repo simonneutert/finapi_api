@@ -1,4 +1,4 @@
-# FinapiApiClient::ExecuteSepaDirectDebitParams
+# FinapiApi::ExecuteSepaDirectDebitParams
 
 ## Properties
 Name | Type | Description | Notes

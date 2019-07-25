@@ -1,4 +1,4 @@
-# FinapiApiClient::CategoryParams
+# FinapiApi::CategoryParams
 
 ## Properties
 Name | Type | Description | Notes

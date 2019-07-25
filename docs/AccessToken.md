@@ -1,4 +1,4 @@
-# FinapiApiClient::AccessToken
+# FinapiApi::AccessToken
 
 ## Properties
 Name | Type | Description | Notes

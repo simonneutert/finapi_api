@@ -1,4 +1,4 @@
-# FinapiApiClient::ClearingAccountData
+# FinapiApi::ClearingAccountData
 
 ## Properties
 Name | Type | Description | Notes

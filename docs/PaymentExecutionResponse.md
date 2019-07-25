@@ -1,4 +1,4 @@
-# FinapiApiClient::PaymentExecutionResponse
+# FinapiApi::PaymentExecutionResponse
 
 ## Properties
 Name | Type | Description | Notes

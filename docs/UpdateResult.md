@@ -1,4 +1,4 @@
-# FinapiApiClient::UpdateResult
+# FinapiApi::UpdateResult
 
 ## Properties
 Name | Type | Description | Notes

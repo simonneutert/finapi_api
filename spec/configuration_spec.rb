@@ -12,14 +12,14 @@ Swagger Codegen version: 2.4.7
 
 require 'spec_helper'
 
-describe FinapiApiClient::Configuration do
-  let(:config) { FinapiApiClient::Configuration.default }
+describe FinapiApi::Configuration do
+  let(:config) { FinapiApi::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     # require 'URI'
     # uri = URI.parse("https://localhost")
-    # FinapiApiClient.configure do |c|
+    # FinapiApi.configure do |c|
     #   c.host = uri.host
     #   c.base_path = uri.path
     # end

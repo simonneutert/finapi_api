@@ -1,4 +1,4 @@
-# FinapiApiClient::MockAccountData
+# FinapiApi::MockAccountData
 
 ## Properties
 Name | Type | Description | Notes

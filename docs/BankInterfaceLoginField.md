@@ -1,4 +1,4 @@
-# FinapiApiClient::BankInterfaceLoginField
+# FinapiApi::BankInterfaceLoginField
 
 ## Properties
 Name | Type | Description | Notes

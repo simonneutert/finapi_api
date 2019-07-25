@@ -1,4 +1,4 @@
-# FinapiApiClient::MultiStepAuthentication
+# FinapiApi::MultiStepAuthentication
 
 ## Properties
 Name | Type | Description | Notes

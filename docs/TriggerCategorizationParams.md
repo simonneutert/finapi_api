@@ -1,4 +1,4 @@
-# FinapiApiClient::TriggerCategorizationParams
+# FinapiApi::TriggerCategorizationParams
 
 ## Properties
 Name | Type | Description | Notes

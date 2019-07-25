@@ -1,4 +1,4 @@
-# FinapiApiClient::VerificationStatusResource
+# FinapiApi::VerificationStatusResource
 
 ## Properties
 Name | Type | Description | Notes

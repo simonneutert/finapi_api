@@ -1,4 +1,4 @@
-# FinapiApiClient::ChangeClientCredentialsParams
+# FinapiApi::ChangeClientCredentialsParams
 
 ## Properties
 Name | Type | Description | Notes

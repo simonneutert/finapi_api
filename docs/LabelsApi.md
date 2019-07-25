@@ -1,4 +1,4 @@
-# FinapiApiClient::LabelsApi
+# FinapiApi::LabelsApi
 
 All URIs are relative to *https://localhost*
 
@@ -25,21 +25,21 @@ Create a new label for a specific user. Must pass the new label's name and the u
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::LabelsApi.new
+api_instance = FinapiApi::LabelsApi.new
 
-body = FinapiApiClient::LabelParams.new # LabelParams | Label's name
+body = FinapiApi::LabelParams.new # LabelParams | Label's name
 
 
 begin
   #Create a new label
   result = api_instance.create_label(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling LabelsApi->create_label: #{e}"
 end
 ```
@@ -77,18 +77,18 @@ Delete all labels of the user that is authorized by the access_token. Must pass 
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::LabelsApi.new
+api_instance = FinapiApi::LabelsApi.new
 
 begin
   #Delete all labels
   result = api_instance.delete_all_labels
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling LabelsApi->delete_all_labels: #{e}"
 end
 ```
@@ -123,12 +123,12 @@ Delete a single label of the user that is authorized by the access_token. Must p
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::LabelsApi.new
+api_instance = FinapiApi::LabelsApi.new
 
 id = 789 # Integer | Identifier of the label to delete
 
@@ -136,7 +136,7 @@ id = 789 # Integer | Identifier of the label to delete
 begin
   #Delete a label
   api_instance.delete_label(id)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling LabelsApi->delete_label: #{e}"
 end
 ```
@@ -174,23 +174,23 @@ Change the name of a label of the user that is authorized by the access_token. M
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::LabelsApi.new
+api_instance = FinapiApi::LabelsApi.new
 
 id = 789 # Integer | Label's identifier
 
-body = FinapiApiClient::LabelParams.new # LabelParams | Label's new name
+body = FinapiApi::LabelParams.new # LabelParams | Label's new name
 
 
 begin
   #Edit a label
   result = api_instance.edit_label(id, body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling LabelsApi->edit_label: #{e}"
 end
 ```
@@ -229,12 +229,12 @@ Get labels of the user that is authorized by the access_token. Must pass the use
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::LabelsApi.new
+api_instance = FinapiApi::LabelsApi.new
 
 opts = { 
   ids: [56], # Array<Integer> | A comma-separated list of label identifiers. If specified, then only labels whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000.
@@ -248,7 +248,7 @@ begin
   #Get and search all labels
   result = api_instance.get_and_search_all_labels(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling LabelsApi->get_and_search_all_labels: #{e}"
 end
 ```
@@ -290,12 +290,12 @@ Get a single label of the user that is authorized by the access_token. Must pass
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::LabelsApi.new
+api_instance = FinapiApi::LabelsApi.new
 
 id = 789 # Integer | Identifier of requested label
 
@@ -304,7 +304,7 @@ begin
   #Get a label
   result = api_instance.get_label(id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling LabelsApi->get_label: #{e}"
 end
 ```
@@ -342,12 +342,12 @@ Get a list of multiple labels of the user that is authorized by the access_token
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::LabelsApi.new
+api_instance = FinapiApi::LabelsApi.new
 
 ids = [56] # Array<Integer> | Comma-separated list of identifiers of requested labels
 
@@ -356,7 +356,7 @@ begin
   #Get multiple labels
   result = api_instance.get_multiple_labels(ids)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling LabelsApi->get_multiple_labels: #{e}"
 end
 ```

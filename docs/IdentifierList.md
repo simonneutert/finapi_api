@@ -1,4 +1,4 @@
-# FinapiApiClient::IdentifierList
+# FinapiApi::IdentifierList
 
 ## Properties
 Name | Type | Description | Notes

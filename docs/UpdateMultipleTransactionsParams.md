@@ -1,4 +1,4 @@
-# FinapiApiClient::UpdateMultipleTransactionsParams
+# FinapiApi::UpdateMultipleTransactionsParams
 
 ## Properties
 Name | Type | Description | Notes

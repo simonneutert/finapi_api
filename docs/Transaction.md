@@ -1,4 +1,4 @@
-# FinapiApiClient::Transaction
+# FinapiApi::Transaction
 
 ## Properties
 Name | Type | Description | Notes

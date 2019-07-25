@@ -1,4 +1,4 @@
-# FinapiApiClient::Payment
+# FinapiApi::Payment
 
 ## Properties
 Name | Type | Description | Notes

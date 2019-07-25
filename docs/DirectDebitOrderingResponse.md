@@ -1,4 +1,4 @@
-# FinapiApiClient::DirectDebitOrderingResponse
+# FinapiApi::DirectDebitOrderingResponse
 
 ## Properties
 Name | Type | Description | Notes

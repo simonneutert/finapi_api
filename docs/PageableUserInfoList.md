@@ -1,4 +1,4 @@
-# FinapiApiClient::PageableUserInfoList
+# FinapiApi::PageableUserInfoList
 
 ## Properties
 Name | Type | Description | Notes

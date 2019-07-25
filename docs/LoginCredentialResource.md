@@ -1,4 +1,4 @@
-# FinapiApiClient::LoginCredentialResource
+# FinapiApi::LoginCredentialResource
 
 ## Properties
 Name | Type | Description | Notes

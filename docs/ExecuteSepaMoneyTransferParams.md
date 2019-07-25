@@ -1,4 +1,4 @@
-# FinapiApiClient::ExecuteSepaMoneyTransferParams
+# FinapiApi::ExecuteSepaMoneyTransferParams
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# FinapiApiClient::UsersApi
+# FinapiApi::UsersApi
 
 All URIs are relative to *https://localhost*
 
@@ -27,21 +27,21 @@ Create a new user
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::UsersApi.new
+api_instance = FinapiApi::UsersApi.new
 
-body = FinapiApiClient::UserCreateParams.new # UserCreateParams | User's details
+body = FinapiApi::UserCreateParams.new # UserCreateParams | User's details
 
 
 begin
   #Create a new user
   result = api_instance.create_user(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling UsersApi->create_user: #{e}"
 end
 ```
@@ -79,17 +79,17 @@ Delete the authorized user. Must pass the user's access_token. ATTENTION: This d
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::UsersApi.new
+api_instance = FinapiApi::UsersApi.new
 
 begin
   #Delete the authorized user
   api_instance.delete_authorized_user
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling UsersApi->delete_authorized_user: #{e}"
 end
 ```
@@ -124,12 +124,12 @@ Delete an unverified user. Must pass your global (i.e. client) access_token.<br/
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::UsersApi.new
+api_instance = FinapiApi::UsersApi.new
 
 user_id = 'user_id_example' # String | 
 
@@ -137,7 +137,7 @@ user_id = 'user_id_example' # String |
 begin
   #Delete an unverified user
   api_instance.delete_unverified_user(user_id)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling UsersApi->delete_unverified_user: #{e}"
 end
 ```
@@ -175,21 +175,21 @@ Edit the authorized user's data and settings. Must pass the user's access_token.
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::UsersApi.new
+api_instance = FinapiApi::UsersApi.new
 
-body = FinapiApiClient::UserUpdateParams.new # UserUpdateParams | User's details
+body = FinapiApi::UserUpdateParams.new # UserUpdateParams | User's details
 
 
 begin
   #Edit the authorized user
   result = api_instance.edit_authorized_user(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling UsersApi->edit_authorized_user: #{e}"
 end
 ```
@@ -227,21 +227,21 @@ Change the password of a user. Must pass your global (i.e. client) access_token.
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::UsersApi.new
+api_instance = FinapiApi::UsersApi.new
 
 opts = { 
-  body: FinapiApiClient::ExecutePasswordChangeParams.new # ExecutePasswordChangeParams | 
+  body: FinapiApi::ExecutePasswordChangeParams.new # ExecutePasswordChangeParams | 
 }
 
 begin
   #Execute password change
   api_instance.execute_password_change(opts)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling UsersApi->execute_password_change: #{e}"
 end
 ```
@@ -279,18 +279,18 @@ Get the authorized user's data. Must pass the user's access_token. Only the auth
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::UsersApi.new
+api_instance = FinapiApi::UsersApi.new
 
 begin
   #Get the authorized user
   result = api_instance.get_authorized_user
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling UsersApi->get_authorized_user: #{e}"
 end
 ```
@@ -325,12 +325,12 @@ Get the verification status of the requested user. Must pass your global (i.e. c
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::UsersApi.new
+api_instance = FinapiApi::UsersApi.new
 
 user_id = 'user_id_example' # String | User's identifier
 
@@ -339,7 +339,7 @@ begin
   #Get a user's verification status
   result = api_instance.get_verification_status(user_id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling UsersApi->get_verification_status: #{e}"
 end
 ```
@@ -377,22 +377,22 @@ Request password change for a user. Must pass your global (i.e. client) access_t
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::UsersApi.new
+api_instance = FinapiApi::UsersApi.new
 
 opts = { 
-  body: FinapiApiClient::RequestPasswordChangeParams.new # RequestPasswordChangeParams | 
+  body: FinapiApi::RequestPasswordChangeParams.new # RequestPasswordChangeParams | 
 }
 
 begin
   #Request password change
   result = api_instance.request_password_change(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling UsersApi->request_password_change: #{e}"
 end
 ```
@@ -430,12 +430,12 @@ Verify a user. User verification is only required when your client does not have
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::UsersApi.new
+api_instance = FinapiApi::UsersApi.new
 
 user_id = 'user_id_example' # String | User's identifier
 
@@ -443,7 +443,7 @@ user_id = 'user_id_example' # String | User's identifier
 begin
   #Verify a user
   api_instance.verify_user(user_id)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling UsersApi->verify_user: #{e}"
 end
 ```

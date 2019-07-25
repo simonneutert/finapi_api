@@ -1,4 +1,4 @@
-# FinapiApiClient::PageableSecurityList
+# FinapiApi::PageableSecurityList
 
 ## Properties
 Name | Type | Description | Notes

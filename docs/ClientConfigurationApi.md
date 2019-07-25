@@ -1,4 +1,4 @@
-# FinapiApiClient::ClientConfigurationApi
+# FinapiApi::ClientConfigurationApi
 
 All URIs are relative to *https://localhost*
 
@@ -20,22 +20,22 @@ Edit your client's configuration. Must pass your global (i.e. client) access_tok
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::ClientConfigurationApi.new
+api_instance = FinapiApi::ClientConfigurationApi.new
 
 opts = { 
-  body: FinapiApiClient::ClientConfigurationParams.new # ClientConfigurationParams | Client configuration parameters
+  body: FinapiApi::ClientConfigurationParams.new # ClientConfigurationParams | Client configuration parameters
 }
 
 begin
   #Edit client configuration
   result = api_instance.edit_client_configuration(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling ClientConfigurationApi->edit_client_configuration: #{e}"
 end
 ```
@@ -73,18 +73,18 @@ Get your client's configuration. Must pass your global (i.e. client) access_toke
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::ClientConfigurationApi.new
+api_instance = FinapiApi::ClientConfigurationApi.new
 
 begin
   #Get client configuration
   result = api_instance.get_client_configuration
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling ClientConfigurationApi->get_client_configuration: #{e}"
 end
 ```

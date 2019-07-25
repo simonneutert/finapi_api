@@ -1,4 +1,4 @@
-# FinapiApiClient::WebForm
+# FinapiApi::WebForm
 
 ## Properties
 Name | Type | Description | Notes

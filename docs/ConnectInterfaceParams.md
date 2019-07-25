@@ -1,4 +1,4 @@
-# FinapiApiClient::ConnectInterfaceParams
+# FinapiApi::ConnectInterfaceParams
 
 ## Properties
 Name | Type | Description | Notes

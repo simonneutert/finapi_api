@@ -1,4 +1,4 @@
-# FinapiApiClient::SingleMoneyTransferRecipientData
+# FinapiApi::SingleMoneyTransferRecipientData
 
 ## Properties
 Name | Type | Description | Notes

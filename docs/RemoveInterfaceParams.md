@@ -1,4 +1,4 @@
-# FinapiApiClient::RemoveInterfaceParams
+# FinapiApi::RemoveInterfaceParams
 
 ## Properties
 Name | Type | Description | Notes

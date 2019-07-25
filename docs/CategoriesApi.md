@@ -1,4 +1,4 @@
-# FinapiApiClient::CategoriesApi
+# FinapiApi::CategoriesApi
 
 All URIs are relative to *https://localhost*
 
@@ -27,22 +27,22 @@ Create a new custom transaction category for the authorized user, that can then 
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::CategoriesApi.new
+api_instance = FinapiApi::CategoriesApi.new
 
 opts = { 
-  body: FinapiApiClient::CategoryParams.new # CategoryParams | Parameters of the new category
+  body: FinapiApi::CategoryParams.new # CategoryParams | Parameters of the new category
 }
 
 begin
   #Create a new category
   result = api_instance.create_category(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling CategoriesApi->create_category: #{e}"
 end
 ```
@@ -80,18 +80,18 @@ Delete all custom categories of the user that is authorized by the access_token.
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::CategoriesApi.new
+api_instance = FinapiApi::CategoriesApi.new
 
 begin
   #Delete all categories
   result = api_instance.delete_all_categories
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling CategoriesApi->delete_all_categories: #{e}"
 end
 ```
@@ -126,12 +126,12 @@ Delete a single category of the user that is authorized by the access_token. Mus
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::CategoriesApi.new
+api_instance = FinapiApi::CategoriesApi.new
 
 id = 789 # Integer | Category identifier
 
@@ -139,7 +139,7 @@ id = 789 # Integer | Category identifier
 begin
   #Delete a category
   api_instance.delete_category(id)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling CategoriesApi->delete_category: #{e}"
 end
 ```
@@ -177,24 +177,24 @@ Change the name of a custom transaction category belonging to the authorized use
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::CategoriesApi.new
+api_instance = FinapiApi::CategoriesApi.new
 
 id = 789 # Integer | Identifier of the category to edit
 
 opts = { 
-  body: FinapiApiClient::EditCategoryParams.new # EditCategoryParams | New category name
+  body: FinapiApi::EditCategoryParams.new # EditCategoryParams | New category name
 }
 
 begin
   #Edit a category
   result = api_instance.edit_category(id, opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling CategoriesApi->edit_category: #{e}"
 end
 ```
@@ -233,12 +233,12 @@ Get a list of all global finAPI categories as well as all custom categories of t
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::CategoriesApi.new
+api_instance = FinapiApi::CategoriesApi.new
 
 opts = { 
   ids: [56], # Array<Integer> | A comma-separated list of category identifiers. If specified, then only categories whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000.
@@ -253,7 +253,7 @@ begin
   #Get and search all categories
   result = api_instance.get_and_search_all_categories(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling CategoriesApi->get_and_search_all_categories: #{e}"
 end
 ```
@@ -296,12 +296,12 @@ Get the cash flow(s) (= total income, spending, and balance) for one or several 
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::CategoriesApi.new
+api_instance = FinapiApi::CategoriesApi.new
 
 opts = { 
   search: 'search_example', # String | If specified, then only transactions that contain the search term in their purpose or counterpart fields will be contained in the result. Note that the search is case insensitive.
@@ -328,7 +328,7 @@ begin
   #Get cash flows
   result = api_instance.get_cash_flows(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling CategoriesApi->get_cash_flows: #{e}"
 end
 ```
@@ -383,12 +383,12 @@ Get a single category that is either a global finAPI category or a custom catego
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::CategoriesApi.new
+api_instance = FinapiApi::CategoriesApi.new
 
 id = 789 # Integer | Category identifier
 
@@ -397,7 +397,7 @@ begin
   #Get a category
   result = api_instance.get_category(id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling CategoriesApi->get_category: #{e}"
 end
 ```
@@ -435,12 +435,12 @@ Get a list of multiple categories that are either a global finAPI category or a 
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::CategoriesApi.new
+api_instance = FinapiApi::CategoriesApi.new
 
 ids = [56] # Array<Integer> | Comma-separated list of identifiers of requested categories
 
@@ -449,7 +449,7 @@ begin
   #Get multiple categories
   result = api_instance.get_multiple_categories(ids)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling CategoriesApi->get_multiple_categories: #{e}"
 end
 ```
@@ -487,21 +487,21 @@ This service allows you to create user-specific categorization rules (for the us
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::CategoriesApi.new
+api_instance = FinapiApi::CategoriesApi.new
 
 opts = { 
-  body: FinapiApiClient::TrainCategorizationData.new # TrainCategorizationData | Categorization sample
+  body: FinapiApi::TrainCategorizationData.new # TrainCategorizationData | Categorization sample
 }
 
 begin
   #Train categorization
   api_instance.train_categorization(opts)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling CategoriesApi->train_categorization: #{e}"
 end
 ```

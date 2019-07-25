@@ -1,4 +1,4 @@
-# FinapiApiClient::IbanRuleParams
+# FinapiApi::IbanRuleParams
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# FinapiApiClient::MandatorAdministrationApi
+# FinapiApi::MandatorAdministrationApi
 
 All URIs are relative to *https://localhost*
 
@@ -27,20 +27,20 @@ Change the client_secret for any of your clients, including the mandator admin c
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MandatorAdministrationApi.new
+api_instance = FinapiApi::MandatorAdministrationApi.new
 
-body = FinapiApiClient::ChangeClientCredentialsParams.new # ChangeClientCredentialsParams | Parameters for changing client credentials
+body = FinapiApi::ChangeClientCredentialsParams.new # ChangeClientCredentialsParams | Parameters for changing client credentials
 
 
 begin
   #Change client credentials
   api_instance.change_client_credentials(body)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MandatorAdministrationApi->change_client_credentials: #{e}"
 end
 ```
@@ -78,21 +78,21 @@ This service can be used to define IBAN rules for finAPI's transaction categoriz
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MandatorAdministrationApi.new
+api_instance = FinapiApi::MandatorAdministrationApi.new
 
-body = FinapiApiClient::IbanRulesParams.new # IbanRulesParams | IBAN rule definitions
+body = FinapiApi::IbanRulesParams.new # IbanRulesParams | IBAN rule definitions
 
 
 begin
   #Create IBAN rules
   result = api_instance.create_iban_rules(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MandatorAdministrationApi->create_iban_rules: #{e}"
 end
 ```
@@ -130,21 +130,21 @@ This service can be used to define keyword rules for finAPI's transaction catego
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MandatorAdministrationApi.new
+api_instance = FinapiApi::MandatorAdministrationApi.new
 
-body = FinapiApiClient::KeywordRulesParams.new # KeywordRulesParams | Keyword rule definitions
+body = FinapiApi::KeywordRulesParams.new # KeywordRulesParams | Keyword rule definitions
 
 
 begin
   #Create keyword rules
   result = api_instance.create_keyword_rules(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MandatorAdministrationApi->create_keyword_rules: #{e}"
 end
 ```
@@ -182,21 +182,21 @@ Delete one or multiple IBAN rules that you have previously created via the 'Crea
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MandatorAdministrationApi.new
+api_instance = FinapiApi::MandatorAdministrationApi.new
 
-body = FinapiApiClient::IdentifiersParams.new # IdentifiersParams | List of IBAN rules identifiers.The maximum number of identifiers is 100.
+body = FinapiApi::IdentifiersParams.new # IdentifiersParams | List of IBAN rules identifiers.The maximum number of identifiers is 100.
 
 
 begin
   #Delete IBAN rules
   result = api_instance.delete_iban_rules(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MandatorAdministrationApi->delete_iban_rules: #{e}"
 end
 ```
@@ -234,21 +234,21 @@ Delete one or multiple keyword rules that you have previously created via the 'C
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MandatorAdministrationApi.new
+api_instance = FinapiApi::MandatorAdministrationApi.new
 
-body = FinapiApiClient::IdentifiersParams.new # IdentifiersParams | List of keyword rule identifiers.The maximum number of identifiers is 100.
+body = FinapiApi::IdentifiersParams.new # IdentifiersParams | List of keyword rule identifiers.The maximum number of identifiers is 100.
 
 
 begin
   #Delete keyword rules
   result = api_instance.delete_keyword_rules(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MandatorAdministrationApi->delete_keyword_rules: #{e}"
 end
 ```
@@ -286,21 +286,21 @@ Delete one or several users, which are specified by a given list of identifiers.
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MandatorAdministrationApi.new
+api_instance = FinapiApi::MandatorAdministrationApi.new
 
-body = FinapiApiClient::UserIdentifiersParams.new # UserIdentifiersParams | List of user identifiers
+body = FinapiApi::UserIdentifiersParams.new # UserIdentifiersParams | List of user identifiers
 
 
 begin
   #Delete users
   result = api_instance.delete_users(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MandatorAdministrationApi->delete_users: #{e}"
 end
 ```
@@ -338,12 +338,12 @@ Returns all IBAN-based categorization rules that you have defined for your users
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MandatorAdministrationApi.new
+api_instance = FinapiApi::MandatorAdministrationApi.new
 
 opts = { 
   page: 1, # Integer | Result page that you want to retrieve
@@ -354,7 +354,7 @@ begin
   #Get IBAN rules
   result = api_instance.get_iban_rule_list(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MandatorAdministrationApi->get_iban_rule_list: #{e}"
 end
 ```
@@ -393,12 +393,12 @@ Returns all keyword-based categorization rules that you have defined for your us
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MandatorAdministrationApi.new
+api_instance = FinapiApi::MandatorAdministrationApi.new
 
 opts = { 
   page: 1, # Integer | Result page that you want to retrieve
@@ -409,7 +409,7 @@ begin
   #Get keyword rules
   result = api_instance.get_keyword_rule_list(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MandatorAdministrationApi->get_keyword_rule_list: #{e}"
 end
 ```
@@ -448,12 +448,12 @@ Get user list
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MandatorAdministrationApi.new
+api_instance = FinapiApi::MandatorAdministrationApi.new
 
 opts = { 
   min_registration_date: 'min_registration_date_example', # String | Lower bound for a user's registration date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'registrationDate' is equal to or later than the given date will be regarded.
@@ -477,7 +477,7 @@ begin
   #Get user list
   result = api_instance.get_user_list(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MandatorAdministrationApi->get_user_list: #{e}"
 end
 ```

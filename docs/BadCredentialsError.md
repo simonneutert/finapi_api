@@ -1,4 +1,4 @@
-# FinapiApiClient::BadCredentialsError
+# FinapiApi::BadCredentialsError
 
 ## Properties
 Name | Type | Description | Notes

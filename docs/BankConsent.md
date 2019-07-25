@@ -1,4 +1,4 @@
-# FinapiApiClient::BankConsent
+# FinapiApi::BankConsent
 
 ## Properties
 Name | Type | Description | Notes

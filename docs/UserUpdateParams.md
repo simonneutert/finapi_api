@@ -1,4 +1,4 @@
-# FinapiApiClient::UserUpdateParams
+# FinapiApi::UserUpdateParams
 
 ## Properties
 Name | Type | Description | Notes

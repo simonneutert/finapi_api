@@ -1,4 +1,4 @@
-# FinapiApiClient::NotificationRulesApi
+# FinapiApi::NotificationRulesApi
 
 All URIs are relative to *https://localhost*
 
@@ -23,21 +23,21 @@ Create a new notification rule for a specific user. Must pass the user's access_
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::NotificationRulesApi.new
+api_instance = FinapiApi::NotificationRulesApi.new
 
-body = FinapiApiClient::NotificationRuleParams.new # NotificationRuleParams | Notification rule parameters
+body = FinapiApi::NotificationRuleParams.new # NotificationRuleParams | Notification rule parameters
 
 
 begin
   #Create a new notification rule
   result = api_instance.create_notification_rule(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling NotificationRulesApi->create_notification_rule: #{e}"
 end
 ```
@@ -75,18 +75,18 @@ Delete all notification rules of the user that is authorized by the access_token
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::NotificationRulesApi.new
+api_instance = FinapiApi::NotificationRulesApi.new
 
 begin
   #Delete all notification rules
   result = api_instance.delete_all_notification_rules
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling NotificationRulesApi->delete_all_notification_rules: #{e}"
 end
 ```
@@ -121,12 +121,12 @@ Delete a single notification rule of the user that is authorized by the access_t
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::NotificationRulesApi.new
+api_instance = FinapiApi::NotificationRulesApi.new
 
 id = 789 # Integer | Identifier of the notification rule to delete
 
@@ -134,7 +134,7 @@ id = 789 # Integer | Identifier of the notification rule to delete
 begin
   #Delete a notification rule
   api_instance.delete_notification_rule(id)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling NotificationRulesApi->delete_notification_rule: #{e}"
 end
 ```
@@ -172,12 +172,12 @@ Get notification rules of the user that is authorized by the access_token. Must 
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::NotificationRulesApi.new
+api_instance = FinapiApi::NotificationRulesApi.new
 
 opts = { 
   ids: [56], # Array<Integer> | A comma-separated list of notification rule identifiers. If specified, then only notification rules whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000.
@@ -189,7 +189,7 @@ begin
   #Get and search all notification rules
   result = api_instance.get_and_search_all_notification_rules(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling NotificationRulesApi->get_and_search_all_notification_rules: #{e}"
 end
 ```
@@ -229,12 +229,12 @@ Get a single notification rule of the user that is authorized by the access_toke
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::NotificationRulesApi.new
+api_instance = FinapiApi::NotificationRulesApi.new
 
 id = 789 # Integer | Identifier of requested notification rule
 
@@ -243,7 +243,7 @@ begin
   #Get a notification rule
   result = api_instance.get_notification_rule(id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling NotificationRulesApi->get_notification_rule: #{e}"
 end
 ```

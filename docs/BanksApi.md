@@ -1,4 +1,4 @@
-# FinapiApiClient::BanksApi
+# FinapiApi::BanksApi
 
 All URIs are relative to *https://localhost*
 
@@ -21,12 +21,12 @@ Get and search banks from finAPI's database of banks. Must pass the authorized u
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BanksApi.new
+api_instance = FinapiApi::BanksApi.new
 
 opts = { 
   ids: [56], # Array<Integer> | A comma-separated list of bank identifiers. If specified, then only banks whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000.
@@ -46,7 +46,7 @@ begin
   #Get and search all banks
   result = api_instance.get_and_search_all_banks(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BanksApi->get_and_search_all_banks: #{e}"
 end
 ```
@@ -94,12 +94,12 @@ Get a single bank from finAPI's database of banks. You have to pass the bank's i
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BanksApi.new
+api_instance = FinapiApi::BanksApi.new
 
 id = 789 # Integer | Identifier of requested bank
 
@@ -108,7 +108,7 @@ begin
   #Get a bank
   result = api_instance.get_bank(id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BanksApi->get_bank: #{e}"
 end
 ```
@@ -146,12 +146,12 @@ Get a list of multiple banks from finAPI's database of banks. You have to pass a
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BanksApi.new
+api_instance = FinapiApi::BanksApi.new
 
 ids = [56] # Array<Integer> | Comma-separated list of identifiers of requested banks
 
@@ -160,7 +160,7 @@ begin
   #Get multiple banks
   result = api_instance.get_multiple_banks(ids)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BanksApi->get_multiple_banks: #{e}"
 end
 ```

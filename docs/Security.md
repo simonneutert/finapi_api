@@ -1,4 +1,4 @@
-# FinapiApiClient::Security
+# FinapiApi::Security
 
 ## Properties
 Name | Type | Description | Notes

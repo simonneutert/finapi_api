@@ -1,4 +1,4 @@
-# FinapiApiClient::SubTransactionParams
+# FinapiApi::SubTransactionParams
 
 ## Properties
 Name | Type | Description | Notes

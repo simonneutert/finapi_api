@@ -1,4 +1,4 @@
-# FinapiApiClient::Paging
+# FinapiApi::Paging
 
 ## Properties
 Name | Type | Description | Notes

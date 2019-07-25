@@ -1,4 +1,4 @@
-# FinapiApiClient::CashFlowList
+# FinapiApi::CashFlowList
 
 ## Properties
 Name | Type | Description | Notes

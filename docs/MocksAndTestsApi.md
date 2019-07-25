@@ -1,4 +1,4 @@
-# FinapiApiClient::MocksAndTestsApi
+# FinapiApi::MocksAndTestsApi
 
 All URIs are relative to *https://localhost*
 
@@ -20,21 +20,21 @@ This service can be used to check the categorization for a given set of transact
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MocksAndTestsApi.new
+api_instance = FinapiApi::MocksAndTestsApi.new
 
-body = FinapiApiClient::CheckCategorizationData.new # CheckCategorizationData | Transactions data
+body = FinapiApi::CheckCategorizationData.new # CheckCategorizationData | Transactions data
 
 
 begin
   #Check categorization
   result = api_instance.check_categorization(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MocksAndTestsApi->check_categorization: #{e}"
 end
 ```
@@ -72,20 +72,20 @@ This service can be used to mock an update of one or several bank connections by
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::MocksAndTestsApi.new
+api_instance = FinapiApi::MocksAndTestsApi.new
 
-body = FinapiApiClient::MockBatchUpdateParams.new # MockBatchUpdateParams | Data for mock bank connection updates
+body = FinapiApi::MockBatchUpdateParams.new # MockBatchUpdateParams | Data for mock bank connection updates
 
 
 begin
   #Mock batch update
   api_instance.mock_batch_update(body)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling MocksAndTestsApi->mock_batch_update: #{e}"
 end
 ```

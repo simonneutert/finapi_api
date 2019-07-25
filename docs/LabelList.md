@@ -1,4 +1,4 @@
-# FinapiApiClient::LabelList
+# FinapiApi::LabelList
 
 ## Properties
 Name | Type | Description | Notes

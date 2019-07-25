@@ -1,4 +1,4 @@
-# FinapiApiClient::SecuritiesApi
+# FinapiApi::SecuritiesApi
 
 All URIs are relative to *https://localhost*
 
@@ -21,12 +21,12 @@ Get securities of the user that is authorized by the access_token. Must pass the
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::SecuritiesApi.new
+api_instance = FinapiApi::SecuritiesApi.new
 
 opts = { 
   ids: [56], # Array<Integer> | A comma-separated list of security identifiers. If specified, then only securities whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000.
@@ -41,7 +41,7 @@ begin
   #Get and search all securities
   result = api_instance.get_and_search_all_securities(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling SecuritiesApi->get_and_search_all_securities: #{e}"
 end
 ```
@@ -84,12 +84,12 @@ Get a list of multiple securities of the user that is authorized by the access_t
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::SecuritiesApi.new
+api_instance = FinapiApi::SecuritiesApi.new
 
 ids = [56] # Array<Integer> | Comma-separated list of identifiers of requested securities
 
@@ -98,7 +98,7 @@ begin
   #Get multiple securities
   result = api_instance.get_multiple_securities(ids)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling SecuritiesApi->get_multiple_securities: #{e}"
 end
 ```
@@ -136,12 +136,12 @@ Get a single security for a specific user. Must pass the security's identifier a
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::SecuritiesApi.new
+api_instance = FinapiApi::SecuritiesApi.new
 
 id = 789 # Integer | Security identifier
 
@@ -150,7 +150,7 @@ begin
   #Get a security
   result = api_instance.get_security(id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling SecuritiesApi->get_security: #{e}"
 end
 ```

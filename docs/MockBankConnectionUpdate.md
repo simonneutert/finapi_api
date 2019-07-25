@@ -1,4 +1,4 @@
-# FinapiApiClient::MockBankConnectionUpdate
+# FinapiApi::MockBankConnectionUpdate
 
 ## Properties
 Name | Type | Description | Notes

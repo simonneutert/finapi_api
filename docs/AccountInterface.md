@@ -1,4 +1,4 @@
-# FinapiApiClient::AccountInterface
+# FinapiApi::AccountInterface
 
 ## Properties
 Name | Type | Description | Notes

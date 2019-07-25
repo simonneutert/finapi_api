@@ -1,4 +1,4 @@
-# FinapiApiClient::ExecutePasswordChangeParams
+# FinapiApi::ExecutePasswordChangeParams
 
 ## Properties
 Name | Type | Description | Notes

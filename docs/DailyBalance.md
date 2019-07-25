@@ -1,4 +1,4 @@
-# FinapiApiClient::DailyBalance
+# FinapiApi::DailyBalance
 
 ## Properties
 Name | Type | Description | Notes

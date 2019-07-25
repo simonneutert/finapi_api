@@ -1,4 +1,4 @@
-# FinapiApiClient::PaymentsApi
+# FinapiApi::PaymentsApi
 
 All URIs are relative to *https://localhost*
 
@@ -19,12 +19,12 @@ Get payments of the user that is authorized by the access_token. <p>Note: For re
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::PaymentsApi.new
+api_instance = FinapiApi::PaymentsApi.new
 
 opts = { 
   ids: [56], # Array<Integer> | A comma-separated list of payment identifiers. If specified, then only payments whose identifier is matching any of the given identifiers will be regarded. The maximum number of identifiers is 1000.
@@ -40,7 +40,7 @@ begin
   #Get payments
   result = api_instance.get_payments(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling PaymentsApi->get_payments: #{e}"
 end
 ```

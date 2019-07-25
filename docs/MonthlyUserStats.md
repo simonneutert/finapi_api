@@ -1,4 +1,4 @@
-# FinapiApiClient::MonthlyUserStats
+# FinapiApi::MonthlyUserStats
 
 ## Properties
 Name | Type | Description | Notes

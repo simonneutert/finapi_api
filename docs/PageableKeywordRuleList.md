@@ -1,4 +1,4 @@
-# FinapiApiClient::PageableKeywordRuleList
+# FinapiApi::PageableKeywordRuleList
 
 ## Properties
 Name | Type | Description | Notes

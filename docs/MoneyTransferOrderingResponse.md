@@ -1,4 +1,4 @@
-# FinapiApiClient::MoneyTransferOrderingResponse
+# FinapiApi::MoneyTransferOrderingResponse
 
 ## Properties
 Name | Type | Description | Notes

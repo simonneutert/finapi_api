@@ -1,4 +1,4 @@
-# FinapiApiClient::PageableCategoryList
+# FinapiApi::PageableCategoryList
 
 ## Properties
 Name | Type | Description | Notes

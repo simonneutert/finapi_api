@@ -1,4 +1,4 @@
-# FinapiApiClient::AuthorizationApi
+# FinapiApi::AuthorizationApi
 
 All URIs are relative to *https://localhost*
 
@@ -20,7 +20,7 @@ finAPI implements the OAuth 2.0 Standard for authorizing applications and users 
 # load the gem
 require 'swagger_client'
 
-api_instance = FinapiApiClient::AuthorizationApi.new
+api_instance = FinapiApi::AuthorizationApi.new
 
 grant_type = 'grant_type_example' # String | Determines the required type of authorization:password - authorize a user; client_credentials - authorize a client;refresh_token - refresh a user's access_token.
 
@@ -38,7 +38,7 @@ begin
   #Get tokens
   result = api_instance.get_token(grant_type, client_id, client_secret, opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AuthorizationApi->get_token: #{e}"
 end
 ```
@@ -81,12 +81,12 @@ An additional endpoint for the OAuth 2.0 Standard, which allows clients to notif
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AuthorizationApi.new
+api_instance = FinapiApi::AuthorizationApi.new
 
 token = 'token_example' # String | The token that the client wants to get revoked
 
@@ -97,7 +97,7 @@ opts = {
 begin
   #Revoke a token
   api_instance.revoke_token(token, opts)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AuthorizationApi->revoke_token: #{e}"
 end
 ```

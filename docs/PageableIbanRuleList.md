@@ -1,4 +1,4 @@
-# FinapiApiClient::PageableIbanRuleList
+# FinapiApi::PageableIbanRuleList
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# FinapiApiClient::UserCreateParams
+# FinapiApi::UserCreateParams
 
 ## Properties
 Name | Type | Description | Notes

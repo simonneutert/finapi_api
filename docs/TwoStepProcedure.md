@@ -1,4 +1,4 @@
-# FinapiApiClient::TwoStepProcedure
+# FinapiApi::TwoStepProcedure
 
 ## Properties
 Name | Type | Description | Notes

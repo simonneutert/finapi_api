@@ -1,4 +1,4 @@
-# FinapiApiClient::TrainCategorizationData
+# FinapiApi::TrainCategorizationData
 
 ## Properties
 Name | Type | Description | Notes

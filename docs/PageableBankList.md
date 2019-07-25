@@ -1,4 +1,4 @@
-# FinapiApiClient::PageableBankList
+# FinapiApi::PageableBankList
 
 ## Properties
 Name | Type | Description | Notes

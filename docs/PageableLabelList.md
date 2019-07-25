@@ -1,4 +1,4 @@
-# FinapiApiClient::PageableLabelList
+# FinapiApi::PageableLabelList
 
 ## Properties
 Name | Type | Description | Notes

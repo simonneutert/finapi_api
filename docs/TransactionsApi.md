@@ -1,4 +1,4 @@
-# FinapiApiClient::TransactionsApi
+# FinapiApi::TransactionsApi
 
 All URIs are relative to *https://localhost*
 
@@ -29,12 +29,12 @@ Delete a set, or the entirety, of transactions of the currently authorized user.
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
 opts = { 
   max_deletion_date: 'max_deletion_date_example', # String | If specified, then only those transactions are being deleted whose 'finapiBookingDate' is equal to or earlier to the given date. The date may not be in future, and must be given in the format 'YYYY-MM-DD'. If not specified, then no date limitation will be in place for the deletion.
@@ -46,7 +46,7 @@ begin
   #Delete all transactions
   result = api_instance.delete_all_transactions(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->delete_all_transactions: #{e}"
 end
 ```
@@ -86,12 +86,12 @@ Delete a single transaction of the user that is authorized by the access_token.<
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
 id = 789 # Integer | Identifier of transaction
 
@@ -99,7 +99,7 @@ id = 789 # Integer | Identifier of transaction
 begin
   #Delete a transaction
   api_instance.delete_transaction(id)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->delete_transaction: #{e}"
 end
 ```
@@ -137,21 +137,21 @@ Edit one or multiple transactions. You can edit the following fields: 'isNew=tru
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
-body = FinapiApiClient::UpdateMultipleTransactionsParams.new # UpdateMultipleTransactionsParams | Update transactions parameters
+body = FinapiApi::UpdateMultipleTransactionsParams.new # UpdateMultipleTransactionsParams | Update transactions parameters
 
 
 begin
   #Edit multiple transactions
   result = api_instance.edit_multiple_transactions(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->edit_multiple_transactions: #{e}"
 end
 ```
@@ -189,23 +189,23 @@ Change the fields of multiple transactions. You can change the following fields:
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
 ids = [56] # Array<Integer> | Comma-separated list of identifiers of updated transactions
 
-body = FinapiApiClient::UpdateTransactionsParams.new # UpdateTransactionsParams | Update transactions parameters
+body = FinapiApi::UpdateTransactionsParams.new # UpdateTransactionsParams | Update transactions parameters
 
 
 begin
   #Edit multiple transactions (DEPRECATED)
   result = api_instance.edit_multiple_transactions_deprecated(ids, body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->edit_multiple_transactions_deprecated: #{e}"
 end
 ```
@@ -244,23 +244,23 @@ Change a transaction's fields. You can change the following fields: 'isNew=true|
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
 id = 789 # Integer | Identifier of transaction
 
-body = FinapiApiClient::UpdateTransactionsParams.new # UpdateTransactionsParams | Update transactions parameters
+body = FinapiApi::UpdateTransactionsParams.new # UpdateTransactionsParams | Update transactions parameters
 
 
 begin
   #Edit a transaction
   result = api_instance.edit_transaction(id, body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->edit_transaction: #{e}"
 end
 ```
@@ -299,12 +299,12 @@ Get transactions of the user that is authorized by the access_token. Must pass t
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
 view = 'view_example' # String | This parameter defines finAPI's logical view on the transactions when querying them: 'bankView' regards only the original transactions as they were received from the bank, without considering how the transactions might have gotten split by the user (see POST /transactions/<id>/split). This means that if a transaction is split into logical sub-transactions, then the service will still regard only the original transaction, and NOT the logical sub-transactions in its processing (though for convenience, the transactions will have the data of their sub-transactions included in the response). 'userView' by contrast regards the transactions as they exist for the user. For transactions that have not been split into logical sub-transactions, there is no difference to the \"bankView\". But for transaction that have been split into logical sub-transactions, the service will ONLY regard these sub-transactions, and not the originally received transaction (though for convenience, the sub-transactions will have the identifier of their original transaction included in the response).
 
@@ -338,7 +338,7 @@ begin
   #Get and search all transactions
   result = api_instance.get_and_search_all_transactions(view, opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->get_and_search_all_transactions: #{e}"
 end
 ```
@@ -399,12 +399,12 @@ Get a list of multiple transactions of the user that is authorized by the access
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
 ids = [56] # Array<Integer> | Comma-separated list of identifiers of requested transactions
 
@@ -413,7 +413,7 @@ begin
   #Get multiple transactions
   result = api_instance.get_multiple_transactions(ids)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->get_multiple_transactions: #{e}"
 end
 ```
@@ -451,12 +451,12 @@ Get a single transaction of the user that is authorized by the access_token. Mus
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
 id = 789 # Integer | Identifier of transaction
 
@@ -465,7 +465,7 @@ begin
   #Get a transaction
   result = api_instance.get_transaction(id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->get_transaction: #{e}"
 end
 ```
@@ -503,12 +503,12 @@ Restore a previously split transaction. Removes all of its sub-transactions.
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
 id = 789 # Integer | Transaction identifier
 
@@ -517,7 +517,7 @@ begin
   #Restore a transaction
   result = api_instance.restore_transaction(id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->restore_transaction: #{e}"
 end
 ```
@@ -555,23 +555,23 @@ Split a transaction into several logical sub-transactions. If the given transact
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
 id = 789 # Integer | Transaction identifier
 
-body = FinapiApiClient::SplitTransactionsParams.new # SplitTransactionsParams | Split transactions parameters
+body = FinapiApi::SplitTransactionsParams.new # SplitTransactionsParams | Split transactions parameters
 
 
 begin
   #Split a transaction
   result = api_instance.split_transaction(id, body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->split_transaction: #{e}"
 end
 ```
@@ -610,20 +610,20 @@ Triggers finAPI's background categorization process for all uncategorized transa
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::TransactionsApi.new
+api_instance = FinapiApi::TransactionsApi.new
 
-body = FinapiApiClient::TriggerCategorizationParams.new # TriggerCategorizationParams | Trigger categorization parameters
+body = FinapiApi::TriggerCategorizationParams.new # TriggerCategorizationParams | Trigger categorization parameters
 
 
 begin
   #Trigger categorization
   api_instance.trigger_categorization(body)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling TransactionsApi->trigger_categorization: #{e}"
 end
 ```

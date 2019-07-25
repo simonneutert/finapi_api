@@ -1,4 +1,4 @@
-# FinapiApiClient::KeywordRuleList
+# FinapiApi::KeywordRuleList
 
 ## Properties
 Name | Type | Description | Notes

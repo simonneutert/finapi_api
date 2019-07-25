@@ -1,4 +1,4 @@
-# FinapiApiClient::CategorizationCheckResult
+# FinapiApi::CategorizationCheckResult
 
 ## Properties
 Name | Type | Description | Notes

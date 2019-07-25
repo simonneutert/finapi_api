@@ -1,4 +1,4 @@
-# FinapiApiClient::PaypalTransactionData
+# FinapiApi::PaypalTransactionData
 
 ## Properties
 Name | Type | Description | Notes

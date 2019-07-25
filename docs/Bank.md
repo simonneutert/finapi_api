@@ -1,4 +1,4 @@
-# FinapiApiClient::Bank
+# FinapiApi::Bank
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# FinapiApiClient::ImportBankConnectionParams
+# FinapiApi::ImportBankConnectionParams
 
 ## Properties
 Name | Type | Description | Notes

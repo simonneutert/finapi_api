@@ -1,4 +1,4 @@
-# FinapiApiClient::WebFormsApi
+# FinapiApi::WebFormsApi
 
 All URIs are relative to *https://localhost*
 
@@ -19,12 +19,12 @@ Get a web form of the user that is authorized by the access_token. Must pass the
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::WebFormsApi.new
+api_instance = FinapiApi::WebFormsApi.new
 
 id = 789 # Integer | Identifier of web form
 
@@ -33,7 +33,7 @@ begin
   #Get a web form
   result = api_instance.get_web_form(id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling WebFormsApi->get_web_form: #{e}"
 end
 ```

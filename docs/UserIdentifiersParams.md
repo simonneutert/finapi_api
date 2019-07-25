@@ -1,4 +1,4 @@
-# FinapiApiClient::UserIdentifiersParams
+# FinapiApi::UserIdentifiersParams
 
 ## Properties
 Name | Type | Description | Notes

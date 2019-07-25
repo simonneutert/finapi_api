@@ -1,4 +1,4 @@
-# FinapiApiClient::IdentifiersParams
+# FinapiApi::IdentifiersParams
 
 ## Properties
 Name | Type | Description | Notes

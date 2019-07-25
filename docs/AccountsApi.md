@@ -1,4 +1,4 @@
-# FinapiApiClient::AccountsApi
+# FinapiApi::AccountsApi
 
 All URIs are relative to *https://localhost*
 
@@ -29,12 +29,12 @@ Delete a single bank account of the user that is authorized by the access_token,
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
 id = 789 # Integer | Identifier of the account to delete
 
@@ -42,7 +42,7 @@ id = 789 # Integer | Identifier of the account to delete
 begin
   #Delete an account
   api_instance.delete_account(id)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->delete_account: #{e}"
 end
 ```
@@ -80,18 +80,18 @@ Delete all accounts of the user that is authorized by the access_token, includin
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
 begin
   #Delete all accounts
   result = api_instance.delete_all_accounts
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->delete_all_accounts: #{e}"
 end
 ```
@@ -126,24 +126,24 @@ Change the name and/or the type and/or the 'isNew' flag of a single bank account
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
 id = 789 # Integer | Identifier of the account to edit
 
 opts = { 
-  body: FinapiApiClient::AccountParams.new # AccountParams | New account name and/or type and/or 'isNew' flag
+  body: FinapiApi::AccountParams.new # AccountParams | New account name and/or type and/or 'isNew' flag
 }
 
 begin
   #Edit an account
   result = api_instance.edit_account(id, opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->edit_account: #{e}"
 end
 ```
@@ -182,21 +182,21 @@ Execute a SEPA direct debit order that has been previously submitted by the use 
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
-body = FinapiApiClient::ExecuteSepaDirectDebitParams.new # ExecuteSepaDirectDebitParams | Parameters for the execution of a SEPA direct debit order
+body = FinapiApi::ExecuteSepaDirectDebitParams.new # ExecuteSepaDirectDebitParams | Parameters for the execution of a SEPA direct debit order
 
 
 begin
   #Execute SEPA Direct Debit
   result = api_instance.execute_sepa_direct_debit(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->execute_sepa_direct_debit: #{e}"
 end
 ```
@@ -234,21 +234,21 @@ Execute a SEPA money transfer order that has been previously submitted by the us
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
-body = FinapiApiClient::ExecuteSepaMoneyTransferParams.new # ExecuteSepaMoneyTransferParams | Parameters for the execution of a SEPA money transfer order
+body = FinapiApi::ExecuteSepaMoneyTransferParams.new # ExecuteSepaMoneyTransferParams | Parameters for the execution of a SEPA money transfer order
 
 
 begin
   #Execute SEPA Money Transfer
   result = api_instance.execute_sepa_money_transfer(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->execute_sepa_money_transfer: #{e}"
 end
 ```
@@ -286,12 +286,12 @@ Get a single bank account of the user that is authorized by the access_token. Mu
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
 id = 789 # Integer | Identifier of requested account
 
@@ -300,7 +300,7 @@ begin
   #Get an account
   result = api_instance.get_account(id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->get_account: #{e}"
 end
 ```
@@ -338,12 +338,12 @@ Get bank accounts of the user that is authorized by the access_token. Must pass 
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
 opts = { 
   ids: [56], # Array<Integer> | A comma-separated list of account identifiers. If specified, then only accounts whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000.
@@ -360,7 +360,7 @@ begin
   #Get and search all accounts
   result = api_instance.get_and_search_all_accounts(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->get_and_search_all_accounts: #{e}"
 end
 ```
@@ -405,12 +405,12 @@ Returns the user's daily balances for a given period and a set of specified acco
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
 opts = { 
   account_ids: [56], # Array<Integer> | A comma-separated list of (non-security) account identifiers. If no accounts are specified, all (non-security) accounts of the user are regarded.
@@ -426,7 +426,7 @@ begin
   #Get daily balances
   result = api_instance.get_daily_balances(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->get_daily_balances: #{e}"
 end
 ```
@@ -470,12 +470,12 @@ Get a list of multiple bank accounts of the user that is authorized by the acces
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
 ids = [56] # Array<Integer> | Comma-separated list of identifiers of requested accounts
 
@@ -484,7 +484,7 @@ begin
   #Get multiple accounts
   result = api_instance.get_multiple_accounts(ids)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->get_multiple_accounts: #{e}"
 end
 ```
@@ -522,21 +522,21 @@ Submit a SEPA direct debit order for one or multiple direct debits. Returns an i
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
-body = FinapiApiClient::RequestSepaDirectDebitParams.new # RequestSepaDirectDebitParams | Parameters for a SEPA direct debit request
+body = FinapiApi::RequestSepaDirectDebitParams.new # RequestSepaDirectDebitParams | Parameters for a SEPA direct debit request
 
 
 begin
   #Request SEPA Direct Debit
   result = api_instance.request_sepa_direct_debit(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->request_sepa_direct_debit: #{e}"
 end
 ```
@@ -574,21 +574,21 @@ Submit a SEPA money transfer order for either a single or a collective money tra
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::AccountsApi.new
+api_instance = FinapiApi::AccountsApi.new
 
-body = FinapiApiClient::RequestSepaMoneyTransferParams.new # RequestSepaMoneyTransferParams | Parameters for a SEPA money transfer request
+body = FinapiApi::RequestSepaMoneyTransferParams.new # RequestSepaMoneyTransferParams | Parameters for a SEPA money transfer request
 
 
 begin
   #Request SEPA Money Transfer
   result = api_instance.request_sepa_money_transfer(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling AccountsApi->request_sepa_money_transfer: #{e}"
 end
 ```

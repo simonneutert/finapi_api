@@ -1,4 +1,4 @@
-# FinapiApiClient::LoginCredentialData
+# FinapiApi::LoginCredentialData
 
 ## Properties
 Name | Type | Description | Notes

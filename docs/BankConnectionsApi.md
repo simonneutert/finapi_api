@@ -1,4 +1,4 @@
-# FinapiApiClient::BankConnectionsApi
+# FinapiApi::BankConnectionsApi
 
 All URIs are relative to *https://localhost*
 
@@ -28,21 +28,21 @@ Connects new interface to an existing bank connection for a specific user. Must 
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BankConnectionsApi.new
+api_instance = FinapiApi::BankConnectionsApi.new
 
-body = FinapiApiClient::ConnectInterfaceParams.new # ConnectInterfaceParams | Connect interface parameters
+body = FinapiApi::ConnectInterfaceParams.new # ConnectInterfaceParams | Connect interface parameters
 
 
 begin
   #Connect a new interface
   result = api_instance.connect_interface(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BankConnectionsApi->connect_interface: #{e}"
 end
 ```
@@ -80,18 +80,18 @@ Delete all bank connections of the user that is authorized by the access_token. 
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BankConnectionsApi.new
+api_instance = FinapiApi::BankConnectionsApi.new
 
 begin
   #Delete all bank connections
   result = api_instance.delete_all_bank_connections
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BankConnectionsApi->delete_all_bank_connections: #{e}"
 end
 ```
@@ -126,12 +126,12 @@ Delete a single bank connection of the user that is authorized by the access_tok
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BankConnectionsApi.new
+api_instance = FinapiApi::BankConnectionsApi.new
 
 id = 789 # Integer | Identifier of the bank connection to delete
 
@@ -139,7 +139,7 @@ id = 789 # Integer | Identifier of the bank connection to delete
 begin
   #Delete a bank connection
   api_instance.delete_bank_connection(id)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BankConnectionsApi->delete_bank_connection: #{e}"
 end
 ```
@@ -177,23 +177,23 @@ Edit bank connection data. Must pass the connection's identifier and the user's 
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BankConnectionsApi.new
+api_instance = FinapiApi::BankConnectionsApi.new
 
 id = 789 # Integer | Identifier of the bank connection to change the parameters for
 
-body = FinapiApiClient::EditBankConnectionParams.new # EditBankConnectionParams | New bank connection parameters
+body = FinapiApi::EditBankConnectionParams.new # EditBankConnectionParams | New bank connection parameters
 
 
 begin
   #Edit a bank connection
   result = api_instance.edit_bank_connection(id, body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BankConnectionsApi->edit_bank_connection: #{e}"
 end
 ```
@@ -232,12 +232,12 @@ Get bank connections of the user that is authorized by the access_token. Must pa
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BankConnectionsApi.new
+api_instance = FinapiApi::BankConnectionsApi.new
 
 opts = { 
   ids: [56] # Array<Integer> | A comma-separated list of bank connection identifiers. If specified, then only bank connections whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000.
@@ -247,7 +247,7 @@ begin
   #Get all bank connections
   result = api_instance.get_all_bank_connections(opts)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BankConnectionsApi->get_all_bank_connections: #{e}"
 end
 ```
@@ -285,12 +285,12 @@ Get a single bank connection of the user that is authorized by the access_token.
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BankConnectionsApi.new
+api_instance = FinapiApi::BankConnectionsApi.new
 
 id = 789 # Integer | Identifier of requested bank connection
 
@@ -299,7 +299,7 @@ begin
   #Get a bank connection
   result = api_instance.get_bank_connection(id)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BankConnectionsApi->get_bank_connection: #{e}"
 end
 ```
@@ -337,12 +337,12 @@ Get a list of multiple bank connections of the user that is authorized by the ac
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BankConnectionsApi.new
+api_instance = FinapiApi::BankConnectionsApi.new
 
 ids = [56] # Array<Integer> | Comma-separated list of identifiers of requested bank connections
 
@@ -351,7 +351,7 @@ begin
   #Get multiple bank connections
   result = api_instance.get_multiple_bank_connections(ids)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BankConnectionsApi->get_multiple_bank_connections: #{e}"
 end
 ```
@@ -389,21 +389,21 @@ Imports a new bank connection for a specific user. Must pass the connection cred
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BankConnectionsApi.new
+api_instance = FinapiApi::BankConnectionsApi.new
 
-body = FinapiApiClient::ImportBankConnectionParams.new # ImportBankConnectionParams | Import bank connection parameters
+body = FinapiApi::ImportBankConnectionParams.new # ImportBankConnectionParams | Import bank connection parameters
 
 
 begin
   #Import a new bank connection
   result = api_instance.import_bank_connection(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BankConnectionsApi->import_bank_connection: #{e}"
 end
 ```
@@ -441,20 +441,20 @@ Remove an interface from bank connection and from all associated accounts in the
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BankConnectionsApi.new
+api_instance = FinapiApi::BankConnectionsApi.new
 
-body = FinapiApiClient::RemoveInterfaceParams.new # RemoveInterfaceParams | Remove interface parameters
+body = FinapiApi::RemoveInterfaceParams.new # RemoveInterfaceParams | Remove interface parameters
 
 
 begin
   #Remove an interface
   api_instance.remove_interface(body)
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BankConnectionsApi->remove_interface: #{e}"
 end
 ```
@@ -492,21 +492,21 @@ Update an existing bank connection of the user that is authorized by the access_
 # load the gem
 require 'swagger_client'
 # setup authorization
-FinapiApiClient.configure do |config|
+FinapiApi.configure do |config|
   # Configure OAuth2 access token for authorization: finapi_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = FinapiApiClient::BankConnectionsApi.new
+api_instance = FinapiApi::BankConnectionsApi.new
 
-body = FinapiApiClient::UpdateBankConnectionParams.new # UpdateBankConnectionParams | Update bank connection parameters
+body = FinapiApi::UpdateBankConnectionParams.new # UpdateBankConnectionParams | Update bank connection parameters
 
 
 begin
   #Update a bank connection
   result = api_instance.update_bank_connection(body)
   p result
-rescue FinapiApiClient::ApiError => e
+rescue FinapiApi::ApiError => e
   puts "Exception when calling BankConnectionsApi->update_bank_connection: #{e}"
 end
 ```

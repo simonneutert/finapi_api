@@ -1,4 +1,4 @@
-# FinapiApiClient::EditCategoryParams
+# FinapiApi::EditCategoryParams
 
 ## Properties
 Name | Type | Description | Notes
